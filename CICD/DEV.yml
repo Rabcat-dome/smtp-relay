@@ -12,6 +12,15 @@ services:
       - MH_MAILDIR_PATH=/tmp/maildir
     volumes:
       - maildir:/tmp/maildir
+    networks:
+      - mailhog-network
+    logging:
+      driver: "none"
+
+networks:
+  mailhog-network:
+    name: mailhog-network
+    driver: bridge
 
 volumes:
   maildir:
