@@ -10,8 +10,8 @@ services:
     environment:
       - MH_STORAGE=maildir
       - MH_MAILDIR_PATH=/tmp/maildir
-    volumes:
-      - maildir:/tmp/maildir
+#    volumes:
+#      - maildir:/tmp/maildir
     networks:
       - mailhog-network
     logging:
@@ -22,5 +22,5 @@ networks:
     name: mailhog-network
     driver: bridge
 
-volumes:
-  maildir:
+#volumes:
+#  maildir:
